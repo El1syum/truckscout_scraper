@@ -61,7 +61,7 @@ def get_data():
 
         try:
             desc = soup.find('div', class_='short-description').text.replace(' ', '').replace('\r', '') \
-                .replace('\n', ' ').strip()
+                .replace('\n', ' ').replace(' ', '').strip()
         except AttributeError:
             desc = ''
 
